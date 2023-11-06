@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+}
+
+.gallery {
+  padding: 20px;
+  border: 2em solid #E8E9E8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  object-fit: cover;
+  cursor: move;
+}
+
+.input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  /* Add a smooth transition effect */
+}
+
+
+
+.image-feature {
+  width: 19em;
+  height: 22.9em;
+  position: absolute;
+  right: 5%;
+
+  /* padding-left: 5em;
+  padding-bottom: 5em; */
+
+  border: 1px solid rgba(14, 13, 13, 0.519);
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+}
+
+/* Hide all checkboxes by default */
+.hide input[type="checkbox"] {
+  display: none;
+}
+
+.delete-button {
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  text-decoration: underline;
+}
+
+/* Style for the checkbox */
+.image-container input[type="checkbox"] {
+  /* Hide the checkbox */
+  display: block;
+  padding-bottom: 10px;
+  cursor: pointer;
+  /* Change the cursor when hovering over the checkbox label */
+}
+
+
+/* Show the checkbox when hovering over the grid item */
+.image-container:hover input[type="checkbox"] {
+  opacity: 1;
+
+}
+
+.image-container:hover img {
+  opacity: 0.5;
+}
+
+.image-container.selected input[type="checkbox"] {
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Responsive 3x3 grid */
+  gap: 10px;
+  max-width: 800px;
+  /* Limit the maximum width of the grid */
+  margin: 0 auto;
+  /* Center the grid on the page */
+}
+
+.grid-item {
+  /* background-color: #f2f2f2; */
+  /* padding: 20px; */
+  /* text-align: center; */
+  /* font-size: 24px; */
+  /* border: 1px solid #ccc; */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+  position: absolute;
+  left: 3.9em;
+  bottom: -20%; */
+
+}
+
+.gallery__img {
+  width: 65%;
+  height: 60%;
+  /* padding: 0.01em; */
+  border: 1px solid rgba(14, 13, 13, 0.519);
+  display: block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
